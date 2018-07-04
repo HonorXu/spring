@@ -27,4 +27,10 @@ public class TestController {
 		String s = demoService.getName(name);
 		resp.getWriter().write(s);
 	}
+
+	@DemoRequestMapping("/getInfo")
+	public void getInfo(User user, HttpServletResponse resp) throws IOException {
+		String s = demoService.getInfo(user);
+		resp.getWriter().write(s);
+	}
 }
